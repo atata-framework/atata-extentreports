@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>4.0.0-beta.1</Version>
+    <Description>
+.NET library that adds ExtentReports reporting to Atata.
+
+The package targets .NET Standard 2.0, which supports .NET 5+, .NET Framework 4.6.1+ and .NET Core/Standard 2.0+.
+    </Description>
+    <RepositoryUrl>https://github.com/atata-framework/atata-extentreports</RepositoryUrl>
+    <PackageId>Atata.ExtentReports</PackageId>
+    <PackageTags>atata automation testing test extentreports reporting</PackageTags>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <PackageProjectUrl>https://atata.io</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Atata" Version="4.0.0-beta.1" />
+    <PackageReference Include="ExtentReports" Version="5.0.4" />
+    <PackageReference Include="PolySharp" Version="1.15.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <!-- Directly referencing System.Security.Permissions" 8.0.0,
+    because ExtentReports through RazorEngine.NetCore.nixFix 1.0.1
+    transiently references deprecated vulnerable System.Security.Permissions 5.0.0. -->
+    <PackageReference Include="System.Security.Permissions" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>
