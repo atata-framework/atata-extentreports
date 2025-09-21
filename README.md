@@ -5,7 +5,7 @@
 [![Atata docs](https://img.shields.io/badge/docs-Atata_Framework-orange.svg)](https://atata.io)
 [![X](https://img.shields.io/badge/follow-@AtataFramework-blue.svg)](https://x.com/AtataFramework)
 
-**Atata.ExtentReports** is a .NET library that adds ExtentReports reporting to [Atata](https://github.com/atata-framework/atata).
+**Atata.ExtentReports** is a C#/.NET library that adds ExtentReports reporting to [Atata](https://github.com/atata-framework/atata).
 
 *The package targets .NET Standard 2.0, which supports .NET 5+, .NET Framework 4.6.1+ and .NET Core/Standard 2.0+.*
 
