@@ -1,5 +1,6 @@
 ﻿namespace Atata.ExtentReports.IntegrationTests;
 
+[Parallelizable(ParallelScope.Self)]
 [StartSessionAndShare(typeof(WebDriverSession))]
 public sealed class UsingSameDriverTests : AtataTestSuite
 {
