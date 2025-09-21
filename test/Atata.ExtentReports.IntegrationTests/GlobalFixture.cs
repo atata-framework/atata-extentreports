@@ -1,6 +1,6 @@
 ﻿namespace Atata.ExtentReports.IntegrationTests;
 
-public class GlobalFixture : AtataGlobalFixture
+public sealed class GlobalFixture : AtataGlobalFixture
 {
     protected override void ConfigureAtataContextBaseConfiguration(AtataContextBuilder builder)
     {
