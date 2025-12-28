@@ -21,6 +21,9 @@ public sealed class ExtentLogConsumer : ILogConsumer
         extentContext.LastLogEvent = eventInfo;
     }
 
+    [SuppressMessage("Critical Code Smell", "S1541:Methods and properties should not be too complex")]
+    [SuppressMessage("Major Code Smell", "S1151:\"switch case\" clauses should not have too many lines of code")]
+    [SuppressMessage("Critical Code Smell", "S134:Control flow statements \"if\", \"switch\", \"for\", \"foreach\", \"while\", \"do\"  and \"try\" should not be nested too deeply")]
     private static Status ResolveLogStatus(LogEventInfo eventInfo)
     {
         switch (eventInfo.Level)
