@@ -5,6 +5,7 @@
 /// </summary>
 public sealed class ExtentLogConsumer : ILogConsumer
 {
+    [SuppressMessage("Performance", "SYSLIB1045:Convert to 'GeneratedRegexAttribute'.")]
     private static readonly Regex s_normalizeMessageLineBreakRegex =
         new(@"(?<=\<br\>)\s+", RegexOptions.Compiled);
 

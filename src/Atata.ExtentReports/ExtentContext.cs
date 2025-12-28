@@ -100,6 +100,7 @@ internal sealed class ExtentContext
     }
 
     private sealed class LockingConcurrentDictionary<TKey, TValue>
+        where TKey : notnull
     {
         private readonly ConcurrentDictionary<TKey, Lazy<TValue>> _dictionary;
 

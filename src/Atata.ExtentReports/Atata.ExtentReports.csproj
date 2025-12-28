@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>net8.0;net462</TargetFrameworks>
     <Version>4.0.0-beta.3</Version>
     <Description>
 C#/.NET library that adds ExtentReports reporting to Atata.
 
-The package targets .NET Standard 2.0, which supports .NET 5+, .NET Framework 4.6.1+ and .NET Core/Standard 2.0+.
+The package targets .NET 8.0 and .NET Framework 4.6.2.
     </Description>
     <RepositoryUrl>https://github.com/atata-framework/atata-extentreports</RepositoryUrl>
     <PackageId>Atata.ExtentReports</PackageId>
@@ -26,6 +26,10 @@ The package targets .NET Standard 2.0, which supports .NET 5+, .NET Framework 4.
     because ExtentReports through RazorEngine.NetCore.nixFix 1.0.1
     transiently references deprecated vulnerable System.Security.Permissions 5.0.0. -->
     <PackageReference Include="System.Security.Permissions" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net462'">
+    <Reference Include="System.Web" />
   </ItemGroup>
 
 </Project>
