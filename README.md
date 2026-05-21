@@ -9,6 +9,55 @@
 
 *The package targets .NET 8.0 and .NET Framework 4.6.2.*
 
+## Features
+
+- **Logging**. Writes Atata logs to ExtentReports report.
+- **Artifacts**. Attaches various artifacts (screenshots, page snapshots, etc.) to the report.
+- **Error handling**. Built-in error handling (screenshots, page snapshots, etc.) on test failures and attaching artifacts to a report.
+
+## Installation
+
+Install the package via .NET CLI:
+
+```bash
+dotnet add package Atata.ExtentReports
+```
+
+Or using Package Manager:
+
+```powershell
+Install-Package Atata.ExtentReports
+```
+
+## Usage
+
+In order to integrate ExtentReports with Atata,
+call a `UseExtentReports` extension method on the "base" `AtataContextBuilder` instance.
+
+```cs
+public sealed class GlobalFixture : AtataGlobalFixture
+{
+    protected override void ConfigureAtataContextBaseConfiguration(AtataContextBuilder builder)
+    {
+        builder.UseExtentReports();
+    }
+}
+```
+
+Also you can configure some of the settings:
+
+```cs
+builder.UseExtentReports(x => x
+    .WithReportTitle("Some title")
+    .WithReportFileName("SomeReport.html"));
+```
+
+## Examples
+
+Check out example project: [Atata Samples / ExtentReports](https://github.com/atata-framework/atata-samples/tree/main/ExtentReports)
+
+Check out Atata tutorial: [Reporting to ExtentReports](https://atata.io/tutorials/reporting-to-extentreports/)
+
 ## Community
 
 - Slack: [https://atata-framework.slack.com](https://join.slack.com/t/atata-framework/shared_invite/zt-5j3lyln7-WD1ZtMDzXBhPm0yXLDBzbA)
