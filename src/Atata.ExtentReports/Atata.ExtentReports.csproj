@@ -2,17 +2,20 @@
 
   <PropertyGroup>
     <TargetFrameworks>net8.0;net462</TargetFrameworks>
-    <Version>4.0.0-beta.5</Version>
+    <Version>4.0.0</Version>
     <Description>
 C#/.NET library that adds ExtentReports reporting to Atata.
+
+Atata.ExtentReports on GitHub: https://github.com/atata-framework/atata-extentreports
+Atata Framework documentation: https://atata.io/
 
 The package targets .NET 8.0 and .NET Framework 4.6.2.
     </Description>
     <RepositoryUrl>https://github.com/atata-framework/atata-extentreports</RepositoryUrl>
     <PackageId>Atata.ExtentReports</PackageId>
     <PackageTags>atata automation testing test extentreports reporting</PackageTags>
-    <PackageReleaseNotes></PackageReleaseNotes>
-    <PackageProjectUrl>https://atata.io</PackageProjectUrl>
+    <PackageReleaseNotes>Changelog: https://github.com/atata-framework/atata-extentreports/blob/main/CHANGELOG.md</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/atata-framework/atata-extentreports</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
